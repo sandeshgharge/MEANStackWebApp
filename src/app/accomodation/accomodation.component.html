@@ -1,0 +1,46 @@
+<!--
+  Accomodation
+
+  This component will help student find the place to stay.
+  There will be a list of dormitories and WG which will be managed by Admin
+  Admin is supposed to add Name and Google Location link as a mandatory fields
+
+  Dormitory link is optional, but can be help full
+  Student can directly jump to Website for application
+-->
+
+<form class="example-form" >
+
+  <table class="table" *ngIf = "editAuth">
+    <tbody>
+     <tr>
+       <td><input type="text" class="form-control" id="name" placeholder="Dormitory Name" [(ngModel)]="name" name="name"></td>
+       <td><input type="text" class="form-control" id="dormLink" placeholder="Dormitory Link" [(ngModel)]="dormLink" name="dormLink"></td>
+       <td><input type="text" class="form-control" id="discription" placeholder="Description" [(ngModel)]="discription" name="discription"></td>
+       <td><input type="text" class="form-control" id="locationLink" placeholder="Navigation Link" [(ngModel)]="navLink" name="locationLink"></td>
+       <td><button mat-raised-button (click)="onInsert()">Add</button></td>
+     </tr>
+   </tbody>
+ </table>
+
+</form>
+
+<mat-accordion>
+    <mat-expansion-panel hideToggle *ngFor="let item of lstAccom">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <a href="{{ item.dormLink }}" target="_blank"> {{ item.name }} </a>
+        </mat-panel-title>
+        <mat-panel-description>
+          {{ item.discription }}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <p><iframe 
+        [src]= 'item.navLink | safe' 
+        width="300" height="250" style="border:1;" allowfullscreen="" loading="lazy"></iframe></p>
+        <div *ngIf = "editAuth">
+          <button mat-raised-button (click)="openDialog(item)">Edit</button>
+          <button mat-raised-button (click)="callDelete(item)">Delete</button>
+        </div>
+    </mat-expansion-panel>
+  </mat-accordion>

@@ -1,0 +1,22 @@
+<!--
+    Chat Functionality
+
+    This functionality is partially implemented.
+    Message sent behaves like broadcast message.
+
+    Also, please refresh the page to see the option of Chat and test it out.
+-->
+
+<div  style="padding-top:20% ;padding-bottom: 40;" >
+<table>
+    <tr>
+        <td><input type="text" [(ngModel)]="message"></td>
+        <td><button (click)="sendMessage()">Click to Send message</button></td>
+    </tr>
+    <tr *ngFor="let item of lstMsg">
+
+        <td><ng-template [ngIf] = "item.type == 0">{{item.message}}</ng-template></td>
+        <td><ng-template [ngIf] = "item.type == 1">{{item.message}}</ng-template></td>
+    </tr>
+</table>
+</div>

@@ -1,0 +1,61 @@
+<div id="home"> 
+    <mat-toolbar color="primary">
+      <mat-toolbar-row style="width: 100%;">
+      <div><a href=# routerLink="/"><img src="/assets/THD-Logo.png" height="40"></a></div>
+
+      <span class="spacer"></span>
+
+      <div class="loginLink" *ngIf="editAuth ; else login"><a mat-button href=# (click)="editAuth = !editAuth; logout()">Logout</a></div>
+      <ng-template #login> <div class="loginLink" ><a mat-button href=# routerLink="/login">{{'Login' | translate}}</a></div></ng-template>
+    </mat-toolbar-row>
+    
+
+     <mat-toolbar-row>
+      <div fxShow="true" fxHide.gt-sm="true"> 
+
+      </div> 
+      <div fxShow="true" fxHide.lt-md="true"> </div>
+
+        <div>
+        <a mat-button routerLink="/navigation">{{'Navigation'|translate}}</a>
+        <a mat-button routerLink="/news">{{'News'|translate}}</a>
+        <a mat-button routerLink="/internal-information">{{'Internal information'|translate}}</a>
+        <a mat-button routerLink="/chat">Chat</a>
+
+        <!-- <a mat-button routerLink="/navigation"> Navigation </a>
+        <a mat-button routerLink="/news"> News </a>
+        <a mat-button routerLink="/internal-information">Internal Information</a>
+        <a mat-button routerLink="/international">International</a> -->
+      </div>
+
+      <span class="example-spacer"></span>
+      <!-- <app-select-language></app-select-language> -->
+      <a (click)="languageSwitch('en')"style="cursor: pointer;">EN</a>/
+    <a (click)="languageSwitch('de')"style="cursor: pointer;padding-right:20px">DE</a>
+
+   </mat-toolbar-row> 
+    </mat-toolbar>
+    
+  </div>
+  <router-outlet></router-outlet>
+<div class="footer" style="background-color: rgba(182, 182, 182, 0.822);">
+  <!-- <div class="row bg-secondary text-white mt-4"style="background-color: black;">
+    <div class="col-md-12 glb-footer__disclaimer-text">
+        <a id="slim-footer-logo" aria-label="slim-footer-logo" class="slim-footer-logo"></a>             -->
+  
+  <ul class="glb-footer__disclaimer-links" id="pgFooter"style= "background-color: rgba(182, 182, 182, 0.822);padding-top:10px;padding-bottom:10px;font-size: 15px">
+            
+                
+    <ul><a href="/legal-notices.html" target="" aria-label="Legal notices"style="color: white;">Legal notices</a></ul>
+  
+    <ul><a href="/legal-notices/cookie-policy.html" target="" aria-label="Cookie policy"style="color: white;">Cookie policy</a></ul>
+  
+    <ul><a href="/legal-notices/legal-disclaimer.html" target="" aria-label="Legal disclaimer"style="color: white;">Legal disclaimer</a></ul>
+  
+    <ul><a href="/legal-notices/terms-and-conditions.html" target="" aria-label="Terms and conditions"style="color: white;">Terms and conditions</a></ul>
+  
+  </ul>
+  
+  <!-- </div>
+  </div> -->
+</div>

@@ -1,0 +1,46 @@
+<!--
+  Partner Univerties
+
+  All the students can go abroad to study with different Partner Universities
+  This page will the students to choose the university and apply accordingly
+
+  Admin has the autority to manage the page and again similar to Accomodation
+  Google location link will help know the exact location and with the click on the 
+  University Name it will redirect to Universtity Page
+-->
+
+<h1 style = "text-align: center;">List of Partner Universities</h1>
+
+<form class="example-form">
+
+  <table class="table" *ngIf = "editAuth" style = "justify-content: center;">
+    <tbody>
+     <tr>
+       <td><input type="text" class="form-control" id="uniName" placeholder="University Name" [(ngModel)]="name" name="uniName"></td>
+       <td><input type="text" class="form-control" id="link" placeholder="Link" [(ngModel)]="link" name="link"></td>
+       <td><input type="text" class="form-control" id="locationLink" placeholder="Location Link" [(ngModel)]="locationLink" name="locationLink"></td>
+       <td><button mat-raised-button (click)="onUniInsert()">Add</button></td>
+     </tr>
+   </tbody>
+ </table>
+
+</form>
+
+
+
+<mat-grid-list cols="2" rowHeight="2:1">
+  <mat-grid-tile *ngFor="let item of displayList; let i = index"  >
+    <mat-card class="example-card">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>{{ item.name }}</mat-card-title>
+        <mat-card-subtitle>{{ item.link }}</mat-card-subtitle>
+      </mat-card-header>
+      <iframe [src]= 'item.location | safe' width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      <div *ngIf = "editAuth">
+        <button mat-raised-button (click)="openDialog(item)">Edit</button>
+        <button mat-raised-button (click)="callDelete(item)">Delete</button>
+      </div>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>

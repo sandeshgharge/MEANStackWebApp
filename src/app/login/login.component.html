@@ -1,0 +1,21 @@
+<div style="padding-bottom: 10%;padding-left:10%;padding-right: 30%;">
+<div class="container form-group " class ="login_heading">
+  <h1>Login Page</h1>
+    <form>
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="username" class="form-control" id="username" [(ngModel)]="userName" placeholder="username" name="name">
+      </div>
+      <div class="form-group">
+        <label for="pwd">Password</label>
+        <input type="password" class="form-control" id="pwd" [(ngModel)]="psw" placeholder="password" name="pwd">
+      </div>
+
+      <div style="padding-top:15px">
+        <button (click)="onLogin()" class="btn btn-primary">Login</button>&nbsp;
+        <button mat-raised-button routerLink="/register" >Register</button> 
+      </div>
+      <h5 color="warn"style="padding-top:10px">{{errorMessage}}</h5>
+      </form>
+  </div>
+</div>

@@ -1,0 +1,77 @@
+<!--
+
+  User Page is designed for ADMIN to alter the user details
+
+  Also, if new user is created, their request is created to be 
+  approved by Admin.
+  Only after the admin apporves the user, he / she can login and access the
+  required reatures.
+  This request can be for both Admin and Student
+-->
+
+<mat-tab-group>
+    <mat-tab label="Pending Requests">
+
+      <h2 *ngIf="lstPendingUser.length === 0">No pending requests</h2>
+      <mat-card *ngFor="let item of lstPendingUser; let i = index">
+        <table>
+          <tr>
+            <td>User Name : </td><td>{{item.name}}</td>
+          </tr>
+          <tr>
+            <td>Email : </td><td>{{item.email}}</td>
+          </tr>
+          <tr>
+            <td>Role : </td>
+            <td>
+              <ng-container *ngIf="item.role_id === 0">Admin</ng-container>
+              <ng-container *ngIf="item.role_id === 1">Student</ng-container>
+            </td>
+            </tr>
+            <tr>
+            <td>Status : </td><td>{{item.status}}</td>
+          </tr>
+          <tr>
+            <td>
+              <button mat-raised-button color="primary" (click)="approve(item, 'Approved')">Approve</button>
+            </td>
+            <td>
+              <button mat-stroked-button color="primary" (click)="approve(item, 'Reject')">Reject</button>
+            </td>
+          </tr>
+        </table>
+      </mat-card>
+    </mat-tab>
+    <mat-tab label="Edit Users">
+        
+      <mat-card *ngFor="let item of lstAllUser; let i = index">
+        <table>
+          <tr>
+            <td>User Name : </td><td>{{item.name}}</td>
+          </tr>
+          <tr>
+            <td>Email : </td><td>{{item.email}}</td>
+          </tr>
+          <tr>
+            <td>Role : </td>
+            <td>
+              <ng-container *ngIf="item.role_id === 0">Admin</ng-container>
+              <ng-container *ngIf="item.role_id === 1">Student</ng-container>
+            </td>
+            </tr>
+            <tr>
+            <td>Status : </td><td>{{item.status}}</td>
+          </tr>
+          <tr>
+            <td>
+              <button mat-raised-button color="primary" (click)="openDialog(item)">Edit</button>
+            </td>
+            <td>
+              <button mat-stroked-button color="primary" (click)="callDelete(item)">Delete</button>
+            </td>
+          </tr>
+        </table>
+      </mat-card>
+
+    </mat-tab>
+  </mat-tab-group>

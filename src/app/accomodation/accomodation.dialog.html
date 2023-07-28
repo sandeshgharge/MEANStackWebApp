@@ -1,0 +1,17 @@
+<form class="example-form" >
+
+    <table class="table">
+      <tbody>
+
+         <tr><td><input type="text" class="form-control" id="name" placeholder="Dormitory Name" [(ngModel)]="data.name" name="name" disabled></td></tr>
+         <tr><td><input type="text" class="form-control" id="dormLink" placeholder="Dormitory Link" [(ngModel)]="data.dormLink" name="dormLink"></td></tr>
+         <tr><td><input type="text" class="form-control" id="discription" placeholder="Description" [(ngModel)]="data.discription" name="discription"></td></tr>
+         <tr><td><input type="text" class="form-control" id="locationLink" placeholder="Navigation Link" [(ngModel)]="data.navLink" name="locationLink"></td></tr>
+         <tr><td>
+           <button mat-raised-button [mat-dialog-close]="data" cdkFocusInitial>Update</button>
+          </td></tr>
+
+     </tbody>
+   </table>
+  
+  </form>

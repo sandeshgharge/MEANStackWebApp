@@ -1,0 +1,60 @@
+/* You can add global styles to this file, and also import other style files */
+
+$thd-blau: #1a4273;
+$donau-blau: #009fe3;
+$dark-grey: #313131;
+$light-grey: #434343;
+$schema-bg: rgba(255, 255, 255, 0.9);
+$schema-color: var($dark-grey);
+$lh: 1.4rem;
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.example-button-row {
+    display: table-cell;
+    width: 500px;
+    height: 350px;
+    color:rgb(255, 255, 255);
+
+  }
+  .card{
+    
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+.image{
+  
+  height:200px;
+
+}
+
+.box{
+
+  background-color: #1a2473;
+  box-sizing: border-box;
+    background-clip:padding-box;
+}
+/* .size{
+  width: 300px;
+  height:300px;
+} */
+.size{
+  width: 300px;
+   height:300px;
+  
+}
+.style2{
+  background-color: #28b5ce;
+  box-sizing: border-box;
+    background-clip:padding-box;
+}
+.style1{
+  margin-left: 15%;
+  margin-top: 5%;
+  margin-right: 15%;
+}
+.style{
+  margin-left: 20%;
+  margin-top: 5%;
+  margin-right: 10%;
+}

@@ -1,0 +1,16 @@
+<form class="example-form" >
+
+    <table class="table">
+      <tbody>
+
+         <tr><td><input type="text" class="form-control" id="name" placeholder="University Name" [(ngModel)]="data.name" name="name" disabled></td></tr>
+         <tr><td><input type="text" class="form-control" id="link" placeholder="Link" [(ngModel)]="data.link" name="link"></td></tr>
+         <tr><td><input type="text" class="form-control" id="locationLink" placeholder="Location Link" [(ngModel)]="data.location" name="locationLink"></td></tr>
+         <tr><td>
+           <button mat-raised-button [mat-dialog-close]="data" cdkFocusInitial>Update</button>
+          </td></tr>
+
+     </tbody>
+   </table>
+  
+  </form>

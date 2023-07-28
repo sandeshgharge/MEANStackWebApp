@@ -1,0 +1,127 @@
+<!--
+  Faculty
+
+  This page is used with TAB angular material functionality.
+  There are 3 Tabs covering Faculty, Courses and Professor.
+
+  It is a static website and can be develop dynamically in the future
+-->
+
+<mat-tab-group>
+  <mat-tab label="Faculty"> 
+    <mat-grid-list cols="3" rowheight="2:1" class="style1">
+      <mat-grid-tile>
+        <mat-card class="size">
+          <img mat-card-image src="assets/image14.jpg" routerLink="/study/info" alt="" class="image">
+          <mat-card-content>
+            <p>
+              Faculty AI<br>Computer Science
+            </p>
+          </mat-card-content>
+          </mat-card>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <mat-card class="size">
+          <img mat-card-image src="assets/image13.jpg" routerLink="/study/info" alt="" class="image">
+          <mat-card-content>
+            <p>
+              Faculty AGW.<br>
+              Applied Healthcare Sciences
+            
+            </p>
+          </mat-card-content>
+          </mat-card>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <mat-card class="size">
+          <img mat-card-image src="assets/image12.jpeg" routerLink="/study/info" alt="" class="image" >
+          <mat-card-content>
+            <p>
+              Faculty MB-MK.<br>
+Mechanical Engineering and Mechatronics
+            </p>
+          </mat-card-content>
+          </mat-card>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <mat-card class="size">
+          <img mat-card-image src="assets/image15.jpg"  routerLink="/study/info" alt="" class="image">
+          <mat-card-content>
+            <p>
+              faculty nuw<br>
+applied natural sciences and industrial engineering
+            </p>
+          </mat-card-content>
+          </mat-card>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <mat-card class="size">
+          <img mat-card-image src="assets/image16.jpg" routerLink="/study/info"  alt="" class="image">
+          <mat-card-content>
+            <p>
+              Faculty EMT.<br>
+Electrical Engineering and Media Technology
+            </p>
+          </mat-card-content>
+          </mat-card>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <mat-card class="size">
+          <img mat-card-image src="assets/image17.jpg" routerLink="/study/info" alt="" class="image">
+          <mat-card-content>
+            <p>
+              Faculty BIW<br>
+              Civil and Construction Engineering
+            </p>
+          </mat-card-content>
+          </mat-card>
+      </mat-grid-tile>
+   </mat-grid-list>
+   </mat-tab>
+   
+  <mat-tab label="courses"> 
+    <app-course></app-course>
+  </mat-tab>
+
+  <mat-tab label="proffesor"> 
+    <mat-grid-list cols="3" rowheight="2:1" class="style1">
+      <mat-grid-tile>
+        <mat-card class="size">
+          <img mat-card-image src="assets/image11.jpeg" alt="">
+          <mat-card-content>
+            <p>
+              Prof. Dr. Marcus Barkowsky<br>
+              Faculty of Computer Science<br>
+              Professors
+            </p>
+          </mat-card-content>
+          </mat-card>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <mat-card class="size">
+          <img mat-card-image src="assets/imag8.jpeg" alt="">
+          <mat-card-content>
+            <p>
+              Prof. Dr.-Ing. Udo Garmann<br>
+              Faculty of Computer Science<br>
+              professor
+            
+            </p>
+          </mat-card-content>
+          </mat-card>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <mat-card class="size">
+          <img mat-card-image src="assets/image9.jpeg" alt="">
+          <mat-card-content>
+            <p>
+              Prof. Dr. rer. nat. Peter Jüttner<br>
+              Faculty of Computer Science<br>
+              Professors
+            </p>
+          </mat-card-content>
+          </mat-card>
+      </mat-grid-tile>
+   </mat-grid-list>
+  </mat-tab>
+</mat-tab-group>

@@ -1,0 +1,68 @@
+
+<div>
+  <img [src] = "myimage" alt="image" height=620px width=100%>
+</div>
+
+<br/>
+
+<div class="infotext_small_black" style = "text-align: center; font-size: 24px;" ><h1><b>{{'Discover more about our university'|translate}}</b></h1></div>
+
+<hr/>
+
+<br/>
+
+
+  <div class="row style">
+    <div class="card box size">
+      <a href=# routerLink="/faculty">
+      <div class="card-body">
+        <h2 class="card-text text-white">{{'Faculty' | translate}}</h2>
+      </div>
+    </a>
+    </div>
+    &nbsp;&nbsp;&nbsp;
+    <div class="card box size" >
+      <a href=# routerLink="/allevents">
+      <div class="card-body">
+        <h2 class="card-text text-white">{{'Events'|translate}}</h2>
+      </div>
+    </a>
+    </div>
+    &nbsp;&nbsp;&nbsp;
+    <div class="card box size" >
+      <a href=# routerLink="/accom">
+      <div class="card-body">
+        <h2 class="card-text text-white">{{'Accomodation'|translate}}</h2>
+      </div>
+    </a>
+    </div>
+
+    &nbsp;&nbsp;&nbsp;
+    <div class="card box size" >
+      <a href=# routerLink="/pu">
+      <div class="card-body">
+        <h2 class="card-text text-white">{{'Partner Universities'|translate}}</h2>
+      </div>
+    </a>
+    </div>
+    
+    &nbsp;&nbsp;&nbsp;
+    <div class="card box size" >
+      <a href=# routerLink="/scholarships">
+      <div class="card-body">
+        <h2 class="card-text text-white">{{'Scholarships'|translate}}</h2>
+      </div>
+    </a>
+    </div>
+    
+    &nbsp;&nbsp;&nbsp;
+    <div class="card box size" *ngIf = "editAuth">
+      <a href=# routerLink="/user">
+      <div class="card-body">
+        <h2 class="card-text text-white">{{'User'|translate}}</h2>
+      </div>
+    </a>
+    </div>
+
+</div>
+<br/>

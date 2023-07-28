@@ -1,0 +1,17 @@
+<form class="example-form" >
+
+    <table class="table">
+      <tbody>
+
+         <tr><td><input type="text" class="form-control" id="name" placeholder="Name" [(ngModel)]="data.name" name="name" disabled></td></tr>
+         <tr><td><input type="password" class="form-control" id="link" placeholder="Password" [(ngModel)]="data.password" name="psw"></td></tr>
+         <tr><td><input type="text" class="form-control" id="email" placeholder="Email" [(ngModel)]="data.email" name="email"></td></tr>
+         <tr><td><input type="text" class="form-control" id="status" placeholder="Status" [(ngModel)]="data.status" name="status" disabled></td></tr>
+         
+         <tr><td>
+           <button mat-raised-button [mat-dialog-close]="data" cdkFocusInitial>Update</button>
+          </td></tr>
+     </tbody>
+   </table>
+  
+  </form>
