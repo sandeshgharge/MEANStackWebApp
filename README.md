@@ -1,6 +1,6 @@
 # MIT Project - International Office
 
-Link - 'https://mygit.th-deg.de/sg27875/moderninternettechnology/-/tree/main/Project_InternationalOffice' 
+This project uses Angular in the front end, Express JS as a backend server and Mongo DB as a non-relational database to create a University Website that can help users get information related to Courses, accommodation, and Foreign Universities. There is also an approval process for user creation, and booking meeting rooms under the admin section.
 
 ## Members :
 
